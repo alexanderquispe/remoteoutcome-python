@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "remoteoutcome"
+version = "0.1.0"
+description = "RSV Treatment Effect Estimator from Rambachan, Singh, and Viviano (2025)"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Alexander", email = "author@example.com"}
+]
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy>=1.21.0",
+    "pandas>=1.3.0",
+    "scikit-learn>=1.0.0",
+    "scipy>=1.7.0",
+    "joblib>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pyreadr>=0.4.0",
+    "pyarrow>=10.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/example/remoteoutcome-python"
+Documentation = "https://github.com/example/remoteoutcome-python#readme"
+Repository = "https://github.com/example/remoteoutcome-python"
+
+[tool.setuptools.packages.find]
+where = ["src"]
