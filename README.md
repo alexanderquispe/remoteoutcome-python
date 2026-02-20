@@ -125,6 +125,26 @@ The `rsv_estimate` function returns an `RSVResult` object with:
 - scipy >= 1.7.0
 - joblib >= 1.0.0
 
+## Data Files
+
+The package includes `pred_real_Ycons.parquet` for testing with pre-computed predictions.
+
+For full pipeline testing with RF fitting, you need the smartcard data files. Convert them from the R package:
+
+```python
+import pyreadr
+import pandas as pd
+
+# Load from R package
+r_data_path = "path/to/remoteoutcome/data/"
+df1 = pyreadr.read_r(f"{r_data_path}/smartcard_data_p1.rda")['smartcard_data_p1']
+df2 = pyreadr.read_r(f"{r_data_path}/smartcard_data_p2.rda")['smartcard_data_p2']
+
+# Save as parquet
+df1.to_parquet("data/smartcard_data_p1.parquet")
+df2.to_parquet("data/smartcard_data_p2.parquet")
+```
+
 ## Testing
 
 ```bash
