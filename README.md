@@ -6,13 +6,22 @@ This package estimates treatment effects using remotely sensed variables (RSVs) 
 
 ## Installation
 
+**Install directly from GitHub:**
 ```bash
-pip install -e .
+pip install git+https://github.com/alexanderquispe/remoteoutcome-python.git
 ```
 
-Or with development dependencies:
-
+**Or clone and install:**
 ```bash
+git clone https://github.com/alexanderquispe/remoteoutcome-python.git
+cd remoteoutcome-python
+pip install .
+```
+
+**For development (editable install):**
+```bash
+git clone https://github.com/alexanderquispe/remoteoutcome-python.git
+cd remoteoutcome-python
 pip install -e ".[dev]"
 ```
 
